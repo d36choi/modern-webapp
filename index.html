@@ -23,6 +23,9 @@
     <script type="module">
         import MessageList from './components/messageList.js';
         import './filters/datetime.filter.js';
+        import lifecycleLogger from './plugins/lifecycle-logger.plugin.js'
+
+        Vue.use(lifecycleLogger,{beforeMount: false})
         let vm = new Vue({
             el: '#app',
             data: {
